@@ -17,10 +17,48 @@ app.use(express.static("public"));
 
 
 
+const postArray = [];
 
 
 
+app.get('/', function(req, res){
+  res.render('home', { homecontent: homeStartingContent, post: postArray});
+})
 
+
+app.get('/about', function (req, res) {
+  res.render('about', { aboutContent: aboutContent });
+})
+
+app.get('/contact', function (req, res) {
+  res.render('contact', { contactContent: contactContent,  });
+})
+
+app.get('/compose', function (req, res) {
+  res.render('compose', );
+});
+
+app.post('/compose', function (req, res) {
+  let name = req.body.inputText;
+  let postTextFeild = req.body.postText;
+ 
+
+  let postObject= {
+title: name,
+letter: postTextFeild,
+
+  };
+
+
+  postArray.push(postObject);
+
+  
+
+
+
+  res.redirect('/');
+ 
+})
 
 
 
