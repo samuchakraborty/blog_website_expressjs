@@ -3,16 +3,16 @@
 <h1>HOME</h1>
 <p><%= homecontent %></p>
 
-<div>
+
   <% post.forEach(function(postElement){ %>
 
   <h2><strong><%= postElement.title %> </strong></h2>
 
-  <p><i> <%= postElement.letter %> </i></p>
+  <p class="ps"><i> <%= postElement.letter %> </i></p>
 
   <% }); %>
 
   <!-- }); for(var i = 0; i < post.length; i++) { %> -->
-</div>
+
 
 <%- include('partials/footer'); -%>
