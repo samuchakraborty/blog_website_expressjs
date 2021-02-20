@@ -4,15 +4,12 @@
 <p><%= homecontent %></p>
 
 
-  <% post.forEach(function(postElement){ %>
+<%   for(var i = 0; i < post.length; i++) { %>
+  <h2><%= post[i].title %> </h2>
 
-  <h2><strong><%= postElement.title %> </strong></h2>
+  <p> <%= post[i].letter.substring(0, 150)+"....."%> <a class="btn btn-dark btn-sm" href="/post/<%=post[i].title %>">Read More</a> </p>
 
-  <p class="ps"><i> <%= postElement.letter %> </i></p>
 
-  <% }); %>
-
-  <!-- }); for(var i = 0; i < post.length; i++) { %> -->
-
+  <% } %> 
 
 <%- include('partials/footer'); -%>

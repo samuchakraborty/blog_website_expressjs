@@ -65,7 +65,7 @@ app.get('/post/:books', function (req, res){
     if (check === _.lowerCase(i.title)) {
       
     console.log(check +' match found');
-      res.render('post', { post: {tit: i.title , des: i.letter}});
+      res.render('post', { post: { tit: i.title, des: i.letter}});
   
   
   }
